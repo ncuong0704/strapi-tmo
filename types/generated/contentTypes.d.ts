@@ -395,9 +395,7 @@ export interface ApiContentContent extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    date: Schema.Attribute.DateTime &
-      Schema.Attribute.Required &
-      Schema.Attribute.DefaultTo<'2026-01-18T10:30:00.000Z'>;
+    date: Schema.Attribute.Date & Schema.Attribute.Required;
     guests: Schema.Attribute.Relation<'oneToMany', 'api::guest.guest'>;
     invitation: Schema.Attribute.Text & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;

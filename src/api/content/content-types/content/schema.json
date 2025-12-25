@@ -16,9 +16,8 @@
       "required": true
     },
     "date": {
-      "type": "datetime",
-      "required": true,
-      "default": "2026-01-18T10:30:00.000Z"
+      "type": "date",
+      "required": true
     },
     "name_cd": {
       "type": "string",

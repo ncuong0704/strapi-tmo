@@ -19,4 +19,19 @@ export default ({ env }) => ({
             },
         },
     },
+    'preview-button': {
+        config: {
+          contentTypes: [
+            {
+              uid: 'api::guest.guest',
+              draft: {
+                url: 'https://www.thiepmoionline.vn/{slug}',
+              },
+              published: {
+                url: 'https://www.thiepmoionline.vn/{slug}',
+              },
+            },
+          ],
+        },
+      },
 });
