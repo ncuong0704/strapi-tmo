@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "guests",
+  "info": {
+    "singularName": "guest",
+    "pluralName": "guests",
+    "displayName": "guest",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "content": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::content.content",
+      "inversedBy": "guests"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    }
+  }
+}

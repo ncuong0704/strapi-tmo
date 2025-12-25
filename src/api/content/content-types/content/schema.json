@@ -1,0 +1,90 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contents",
+  "info": {
+    "singularName": "content",
+    "pluralName": "contents",
+    "displayName": "content",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "types": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "datetime",
+      "required": true,
+      "default": "2026-01-18T10:30:00.000Z"
+    },
+    "name_cd": {
+      "type": "string",
+      "required": true
+    },
+    "name_cd_2w": {
+      "type": "string",
+      "required": true
+    },
+    "name_cr": {
+      "type": "string",
+      "required": true
+    },
+    "name_cr_2w": {
+      "type": "string",
+      "required": true
+    },
+    "birth_cd": {
+      "type": "date",
+      "required": true,
+      "default": "1999-12-06"
+    },
+    "birth_cr": {
+      "type": "date",
+      "required": true,
+      "default": "1995-04-07"
+    },
+    "place_type": {
+      "type": "string",
+      "required": false
+    },
+    "place_name": {
+      "type": "string",
+      "required": true
+    },
+    "area": {
+      "type": "string",
+      "required": false
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "welcome": {
+      "type": "time",
+      "required": true,
+      "default": "17:30:00.000"
+    },
+    "banquet": {
+      "type": "time",
+      "required": true,
+      "default": "19:00:00.000"
+    },
+    "lunar": {
+      "type": "string",
+      "required": true
+    },
+    "invitation": {
+      "type": "text",
+      "required": true
+    },
+    "guests": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::guest.guest",
+      "mappedBy": "content"
+    }
+  }
+}
